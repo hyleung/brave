@@ -16,7 +16,8 @@ import com.twitter.zipkin.gen.Span;
  * completion of the local trace span to avoid linking spans with incorrect
  * parents and avoid leaking spans and associated memory.
  */
-public final class InheritableServerClientAndLocalSpanState implements ServerClientAndLocalSpanState {
+public final class InheritableServerClientAndLocalSpanState implements ServerClientAndLocalSpanState,
+                                                                        NestedLocalSpanSupport{
 
     private final InheritableThreadLocal<ServerSpan> currentServerSpan =
             new InheritableThreadLocal<ServerSpan>() {

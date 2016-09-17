@@ -91,7 +91,7 @@ public class Brave {
 
             // the legacy span state doesn't support nested spans per (#166). Only permit nesting on the span
             // state that has instructions on how to use it properly
-            this.allowNestedLocalSpans = state instanceof InheritableServerClientAndLocalSpanState;
+            this.allowNestedLocalSpans = state instanceof NestedLocalSpanSupport;
         }
 
         /**

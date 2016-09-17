@@ -23,7 +23,7 @@ public class InheritableServerClientAndLocalSpanStateTest {
     private static final String SERVICE_NAME = InheritableServerClientAndLocalSpanStateTest.class.getSimpleName();
     private static final int MAX_EXPECTED_DEPTH = 1;
 
-    private InheritableServerClientAndLocalSpanState state;
+    private ServerClientAndLocalSpanState state;
     private ServerSpan mockServerSpan;
     private Span mockSpan;
 
